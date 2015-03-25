@@ -16,23 +16,23 @@ var $asm0C = JSIL.GetAssembly("System.Windows.Forms, Version=4.0.0.0, Culture=ne
 var $asm0D = JSIL.GetAssembly("System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
 var $asm0E = JSIL.GetAssembly("TriHex, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
 var $asm0F = JSIL.GetAssembly("Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-var $asm10 = JSIL.GetAssembly("JSIL.Meta, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
-var $asm11 = JSIL.GetAssembly("System.Data.SqlXml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-var $asm12 = JSIL.GetAssembly("System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
+var $asm10 = JSIL.GetAssembly("System.Data.SqlXml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
+var $asm11 = JSIL.GetAssembly("System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
+var $asm12 = JSIL.GetAssembly("JSIL.Meta, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null");
 
 if (typeof (contentManifest) !== "object") { JSIL.GlobalNamespace.contentManifest = {}; };
 contentManifest["TriHex.exe"] = [
     ["Script", "XNA.Colors.js", { "sizeBytes": 5651 }],
-    ["Script", "Microsoft.Xna.Framework.Input.Touch, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553.js", { "sizeBytes": 30681 }],
     ["Script", "Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553.js", { "sizeBytes": 110557 }],
-    ["Script", "TriHex, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null.js", { "sizeBytes": 50405 }],
     ["Script", "Microsoft.Xna.Framework.GamerServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553.js", { "sizeBytes": 138751 }],
-    ["Script", "System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.js", { "sizeBytes": 666703 }],
+    ["Script", "TriHex, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null.js", { "sizeBytes": 50992 }],
+    ["Script", "Microsoft.Xna.Framework.Input.Touch, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553.js", { "sizeBytes": 30681 }],
     ["Script", "Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553.js", { "sizeBytes": 433721 }],
     ["Script", "System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.js", { "sizeBytes": 87784 }],
     ["Script", "Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553.js", { "sizeBytes": 752126 }],
-    ["Script", "System.Deployment, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.js", { "sizeBytes": 973291 }],
+    ["Script", "System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.js", { "sizeBytes": 666703 }],
     ["Script", "System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.js", { "sizeBytes": 1371851 }],
+    ["Script", "System.Deployment, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.js", { "sizeBytes": 973291 }],
     ["Script", "System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.js", { "sizeBytes": 2988333 }],
     ["Script", "System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.js", { "sizeBytes": 4649589 }],
     ["Script", "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.js", { "sizeBytes": 6707463 }],
