@@ -1,0 +1,2 @@
+Content\hex.xnb
+Content\outline.xnb
