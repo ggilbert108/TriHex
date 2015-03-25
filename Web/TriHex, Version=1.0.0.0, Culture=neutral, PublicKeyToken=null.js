@@ -55,25 +55,19 @@ JSIL.DeclareNamespace("TriHex.Source");
     return ($T0E = JSIL.Memoize($asm05.System.Single)) ();
   };
   var $T0F = function () {
-    return ($T0F = JSIL.Memoize($asm06.System.Collections.Generic.SortedDictionary$b2_Enumerator.Of($asm05.System.Single, $asm0E.TriHex.Source.Hexagon))) ();
+    return ($T0F = JSIL.Memoize(System.Array.Of($asm05.System.Collections.Generic.KeyValuePair$b2.Of($asm05.System.Single, $asm0E.TriHex.Source.Hexagon)))) ();
   };
   var $T10 = function () {
     return ($T10 = JSIL.Memoize($asm05.System.Collections.Generic.KeyValuePair$b2.Of($asm05.System.Single, $asm0E.TriHex.Source.Hexagon))) ();
   };
   var $T11 = function () {
-    return ($T11 = JSIL.Memoize($asm05.System.IDisposable)) ();
-  };
-  var $T12 = function () {
-    return ($T12 = JSIL.Memoize(System.Array.Of($asm00.Microsoft.Xna.Framework.Vector2))) ();
+    return ($T11 = JSIL.Memoize(System.Array.Of($asm00.Microsoft.Xna.Framework.Vector2))) ();
   };
   var $S00 = function () {
     return ($S00 = JSIL.Memoize(new JSIL.MethodSignature($asm00.TypeRef("Microsoft.Xna.Framework.Matrix"), [$asm00.TypeRef("Microsoft.Xna.Framework.Matrix"), $asm00.TypeRef("Microsoft.Xna.Framework.Matrix")]))) ();
   };
   var $S01 = function () {
     return ($S01 = JSIL.Memoize(new JSIL.ConstructorSignature($asm06.TypeRef("System.Collections.Generic.SortedDictionary`2", [$asm05.TypeRef("System.Single"), $asm0E.TypeRef("TriHex.Source.Hexagon")]), null))) ();
-  };
-  var $IM00 = function () {
-    return ($IM00 = JSIL.Memoize($asm05.System.IDisposable.Dispose)) ();
   };
 
   function Board__ctor (w, h) {
@@ -187,7 +181,6 @@ JSIL.DeclareNamespace("TriHex.Source");
   };
 
   function Board_processClick (x, y) {
-    var $temp00;
     if (!this.animation.isAnimating) {
       var trihex = JSIL.Array.New($T01(), 3);
       var map = $S01().Construct();
@@ -204,23 +197,11 @@ JSIL.DeclareNamespace("TriHex.Source");
           }
         }
       }
-      var filled = 0;
-      var enumerator = $T0D().prototype.GetEnumerator.call(map).MemberwiseClone();
-      try {
-
-      $loop2: 
-        while ($T0F().prototype.MoveNext.call(enumerator)) {
-          var pair = $T0F().prototype.get_Current.call(enumerator).MemberwiseClone();
-          trihex[($temp00 = filled, 
-            filled = ((filled + 1) | 0), 
-            $temp00)] = pair.get_Value();
-          if (filled >= 3) {
-            break $loop2;
-          }
-        }
-      } finally {
-        $IM00().Call(enumerator, null);
-      }
+      var pairs = JSIL.Array.New($T10(), 3);
+      map.CopyTo(pairs, 0);
+      trihex[0] = (pairs[0]).get_Value();
+      trihex[1] = (pairs[1]).get_Value();
+      trihex[2] = (pairs[2]).get_Value();
       var triCenter = $T09().get_Zero().MemberwiseClone();
       var vertices = (trihex[0]).get_vertices();
 

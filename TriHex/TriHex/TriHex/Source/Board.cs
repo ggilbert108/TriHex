@@ -111,14 +111,13 @@ namespace TriHex.Source
             }
 
             int filled = 0;
-            foreach (KeyValuePair<float, Hexagon> pair in map)
-            {
-                trihex[filled++] = pair.Value;
-                if (filled >= 3)
-                {
-                    break;
-                }
-            }
+
+            KeyValuePair<float, Hexagon>[] pairs = new KeyValuePair<float, Hexagon>[3];
+            map.CopyTo(pairs, 0);
+
+            trihex[0] = pairs[0].Value;
+            trihex[1] = pairs[1].Value;
+            trihex[2] = pairs[2].Value;
 
             Vector2 triCenter = Vector2.Zero;
             foreach (Vector2 vertex in trihex[0].vertices)

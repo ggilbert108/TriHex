@@ -8,7 +8,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>E:\Documents\GitHub\TriHex\TriHex\TriHex\TriHex\bin\x86\Debug\Content\hex.xnb</Output>
-      <Time>2015-03-25T18:10:14.4113363-05:00</Time>
+      <Time>2015-03-25T18:15:19.8318053-05:00</Time>
     </Item>
     <Item>
       <Source>outline.png</Source>
@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>E:\Documents\GitHub\TriHex\TriHex\TriHex\TriHex\bin\x86\Debug\Content\outline.xnb</Output>
-      <Time>2015-03-25T18:10:14.4193367-05:00</Time>
+      <Time>2015-03-25T18:15:19.8358055-05:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
