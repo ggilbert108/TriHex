@@ -1,0 +1,8 @@
+E:\Documents\GitHub\TriHex\TriHex\TriHex\TriHex\bin\x86\Debug\TriHex.exe
+E:\Documents\GitHub\TriHex\TriHex\TriHex\TriHex\bin\x86\Debug\TriHex.pdb
+E:\Documents\GitHub\TriHex\TriHex\TriHex\TriHex\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+E:\Documents\GitHub\TriHex\TriHex\TriHex\TriHex\obj\x86\Debug\TriHex.exe
+E:\Documents\GitHub\TriHex\TriHex\TriHex\TriHex\obj\x86\Debug\TriHex.pdb
+E:\Documents\GitHub\TriHex\TriHex\TriHex\TriHex\obj\x86\Debug\TriHex.csprojResolveAssemblyReference.cache
+E:\Documents\GitHub\TriHex\TriHex\TriHex\TriHex\bin\x86\Debug\Content\hex.xnb
+E:\Documents\GitHub\TriHex\TriHex\TriHex\TriHex\bin\x86\Debug\Content\outline.xnb
