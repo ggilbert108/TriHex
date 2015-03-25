@@ -112,12 +112,9 @@ namespace TriHex.Source
 
             int filled = 0;
 
-            foreach (Hexagon hexagon in map.Values)
-            {
-                trihex[filled++] = hexagon;
-                if (filled >= 3)
-                    break;
-            }
+            trihex[0] = map.Values.ElementAt(0);
+            trihex[1] = map.Values.ElementAt(1);
+            trihex[2] = map.Values.ElementAt(2);
 
             Vector2 triCenter = Vector2.Zero;
             foreach (Vector2 vertex in trihex[0].vertices)
