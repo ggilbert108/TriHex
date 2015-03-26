@@ -13,7 +13,18 @@ namespace TriHex.Source
             float dx = a.X - b.X;
             float dy = a.Y - b.Y;
             float result = dx*dx + dy*dy;
-            return (float)Math.Sqrt(result);
+            result = (float)Math.Sqrt(result);
+
+            return result;
+        }
+
+        public static float distanceSquared(Vector2 a, Vector2 b)
+        {
+            float dx = a.X - b.X;
+            float dy = a.Y - b.Y;
+            float result = dx * dx + dy * dy;
+
+            return result;
         }
     }
 }

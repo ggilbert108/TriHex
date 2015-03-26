@@ -45,7 +45,7 @@ namespace TriHex.Source
             hexImage = Content.Load<Texture2D>("hex");
             outlineImage = Content.Load<Texture2D>("outline");
 
-            board = new Board(10, 5);
+            board = new Board(13, 6);
         }
 
         protected override void UnloadContent()

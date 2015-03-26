@@ -22,49 +22,43 @@ JSIL.DeclareNamespace("TriHex.Source");
     return ($T03 = JSIL.Memoize($asm0E.TriHex.Source.Animation)) ();
   };
   var $T04 = function () {
-    return ($T04 = JSIL.Memoize($asm03.Microsoft.Xna.Framework.Graphics.SpriteBatch)) ();
+    return ($T04 = JSIL.Memoize($asm05.System.Single)) ();
   };
   var $T05 = function () {
-    return ($T05 = JSIL.Memoize($asm03.Microsoft.Xna.Framework.Graphics.Texture2D)) ();
+    return ($T05 = JSIL.Memoize(System.Array.Of($asm0E.TriHex.Source.Hexagon))) ();
   };
   var $T06 = function () {
-    return ($T06 = JSIL.Memoize($asm0E.TriHex.Source.Window)) ();
+    return ($T06 = JSIL.Memoize($asm03.Microsoft.Xna.Framework.Graphics.SpriteBatch)) ();
   };
   var $T07 = function () {
-    return ($T07 = JSIL.Memoize($asm00.Microsoft.Xna.Framework.Color)) ();
+    return ($T07 = JSIL.Memoize($asm03.Microsoft.Xna.Framework.Graphics.Texture2D)) ();
   };
   var $T08 = function () {
-    return ($T08 = JSIL.Memoize(System.Array.Of($asm0E.TriHex.Source.Hexagon))) ();
+    return ($T08 = JSIL.Memoize($asm0E.TriHex.Source.Window)) ();
   };
   var $T09 = function () {
-    return ($T09 = JSIL.Memoize($asm00.Microsoft.Xna.Framework.Vector2)) ();
+    return ($T09 = JSIL.Memoize($asm00.Microsoft.Xna.Framework.Color)) ();
   };
   var $T0A = function () {
-    return ($T0A = JSIL.Memoize($asm00.Microsoft.Xna.Framework.Matrix)) ();
+    return ($T0A = JSIL.Memoize($asm00.Microsoft.Xna.Framework.Vector2)) ();
   };
   var $T0B = function () {
-    return ($T0B = JSIL.Memoize($asm03.Microsoft.Xna.Framework.Graphics.SpriteSortMode)) ();
+    return ($T0B = JSIL.Memoize($asm00.Microsoft.Xna.Framework.Matrix)) ();
   };
   var $T0C = function () {
-    return ($T0C = JSIL.Memoize($asm05.System.Boolean)) ();
+    return ($T0C = JSIL.Memoize($asm03.Microsoft.Xna.Framework.Graphics.SpriteSortMode)) ();
   };
   var $T0D = function () {
-    return ($T0D = JSIL.Memoize($asm06.System.Collections.Generic.SortedDictionary$b2.Of($asm05.System.Single, $asm0E.TriHex.Source.Hexagon))) ();
+    return ($T0D = JSIL.Memoize($asm05.System.Boolean)) ();
   };
   var $T0E = function () {
-    return ($T0E = JSIL.Memoize($asm05.System.Single)) ();
+    return ($T0E = JSIL.Memoize($asm0E.TriHex.Source.Util)) ();
   };
   var $T0F = function () {
-    return ($T0F = JSIL.Memoize($asm08.System.Linq.Enumerable)) ();
-  };
-  var $T10 = function () {
-    return ($T10 = JSIL.Memoize(System.Array.Of($asm00.Microsoft.Xna.Framework.Vector2))) ();
+    return ($T0F = JSIL.Memoize(System.Array.Of($asm00.Microsoft.Xna.Framework.Vector2))) ();
   };
   var $S00 = function () {
     return ($S00 = JSIL.Memoize(new JSIL.MethodSignature($asm00.TypeRef("Microsoft.Xna.Framework.Matrix"), [$asm00.TypeRef("Microsoft.Xna.Framework.Matrix"), $asm00.TypeRef("Microsoft.Xna.Framework.Matrix")]))) ();
-  };
-  var $S01 = function () {
-    return ($S01 = JSIL.Memoize(new JSIL.ConstructorSignature($asm06.TypeRef("System.Collections.Generic.SortedDictionary`2", [$asm05.TypeRef("System.Single"), $asm0E.TypeRef("TriHex.Source.Hexagon")]), null))) ();
   };
 
   function Board__ctor (w, h) {
@@ -82,9 +76,46 @@ JSIL.DeclareNamespace("TriHex.Source");
     this.animation.isAnimating = false;
   };
 
+  function Board_checkMin (/* ref */ one, /* ref */ two, /* ref */ three, trihex, hexagon, distance) {
+    if (+distance < +one.get()) {
+      var temp = trihex[0];
+      var tempDist = +one.get();
+      trihex[0] = hexagon;
+      one.set(distance);
+      if (temp !== null) {
+        this.checkMin(
+          /* ref */ one, 
+          /* ref */ two, 
+          /* ref */ three, 
+          trihex, 
+          temp, 
+          tempDist
+        );
+      }
+    } else if (+distance < +two.get()) {
+      temp = trihex[1];
+      tempDist = +two.get();
+      trihex[1] = hexagon;
+      two.set(distance);
+      if (temp !== null) {
+        this.checkMin(
+          /* ref */ one, 
+          /* ref */ two, 
+          /* ref */ three, 
+          trihex, 
+          temp, 
+          tempDist
+        );
+      }
+    } else if (+distance < +three.get()) {
+      trihex[2] = hexagon;
+      three.set(distance);
+    }
+  };
+
   function Board_draw (spriteBatch) {
-    var hexImage = $T06().hexImage;
-    var outline = $T06().outlineImage;
+    var hexImage = $T08().hexImage;
+    var outline = $T08().outlineImage;
     var x = 0;
     var xStep = ((+(hexImage.get_Width()) * 0.75) | 0);
 
@@ -106,7 +137,7 @@ JSIL.DeclareNamespace("TriHex.Source");
           spriteBatch.DrawRect(
             outline, 
             hex.get_bounds(), 
-            $T07().get_White()
+            $T09().get_White()
           );
           y = ((y + yStep) | 0);
         }
@@ -120,15 +151,15 @@ JSIL.DeclareNamespace("TriHex.Source");
         hex = trihex[l];
         spriteBatch.End();
         var center = this.animation.center.MemberwiseClone();
-        var k = $S00().CallStatic($T0A(), "op_Multiply", null, 
-          $S00().CallStatic($T0A(), "op_Multiply", null, 
-            $T0A().CreateTranslation(-center.X, -center.Y, 0), 
-            $T0A().CreateRotationZ(this.animation.theta)
+        var k = $S00().CallStatic($T0B(), "op_Multiply", null, 
+          $S00().CallStatic($T0B(), "op_Multiply", null, 
+            $T0B().CreateTranslation(-center.X, -center.Y, 0), 
+            $T0B().CreateRotationZ(this.animation.theta)
           ), 
-          $T0A().CreateTranslation(center.X, center.Y, 0)
+          $T0B().CreateTranslation(center.X, center.Y, 0)
         );
         spriteBatch.Begin(
-          $T0B().Deferred, 
+          $T0C().Deferred, 
           null, 
           null, 
           null, 
@@ -144,7 +175,7 @@ JSIL.DeclareNamespace("TriHex.Source");
         spriteBatch.DrawRect(
           outline, 
           hex.get_bounds(), 
-          $T07().get_White()
+          $T09().get_White()
         );
         spriteBatch.End();
         spriteBatch.Begin();
@@ -178,26 +209,33 @@ JSIL.DeclareNamespace("TriHex.Source");
   };
 
   function Board_processClick (x, y) {
+    var click = new ($T0A())();
+    var one = new JSIL.BoxedVariable(0);
+    var two = new JSIL.BoxedVariable(0);
+    var three = new JSIL.BoxedVariable(0);
     if (!this.animation.isAnimating) {
       var trihex = JSIL.Array.New($T01(), 3);
-      var map = $S01().Construct();
+      one.set(100000);
+      two.set(100000);
+      three.set(10000);
 
       for (var i = 0; i < (this.get_height() | 0); i = ((i + 1) | 0)) {
 
         for (var j = 0; j < (this.get_width() | 0); j = ((j + 1) | 0)) {
-          var center = ((this.grid).Get(i, j)).get_center().MemberwiseClone();
-          var dx = +x - +center.X;
-          var dy = +y - +center.Y;
-          var distance = (dx * dx) + (dy * dy);
-          if (!map.ContainsKey(distance)) {
-            map.Add(distance, (this.grid).Get(i, j));
-          }
+          var hexagon = (this.grid).Get(i, j);
+          $T0A().prototype._ctor.call(click, +x, +y);
+          var distance = +$T0E().distanceSquared(hexagon.get_center(), click);
+          this.checkMin(
+            /* ref */ one, 
+            /* ref */ two, 
+            /* ref */ three, 
+            trihex, 
+            hexagon, 
+            distance
+          );
         }
       }
-      trihex[0] = $T0F().ElementAt$b1($T01())(map.get_Values(), 0);
-      trihex[1] = $T0F().ElementAt$b1($T01())(map.get_Values(), 1);
-      trihex[2] = $T0F().ElementAt$b1($T01())(map.get_Values(), 2);
-      var triCenter = $T09().get_Zero().MemberwiseClone();
+      var triCenter = $T0A().get_Zero().MemberwiseClone();
       var vertices = (trihex[0]).get_vertices();
 
       for (var k = 0; k < (vertices.length | 0); k = ((k + 1) | 0)) {
@@ -252,6 +290,15 @@ JSIL.DeclareNamespace("TriHex.Source");
     $.Method({Static:false, Public:true }, ".ctor", 
       new JSIL.MethodSignature(null, [$.Int32, $.Int32]), 
       Board__ctor
+    );
+
+    $.Method({Static:false, Public:false}, "checkMin", 
+      new JSIL.MethodSignature(null, [
+          $jsilcore.TypeRef("JSIL.Reference", [$.Single]), $jsilcore.TypeRef("JSIL.Reference", [$.Single]), 
+          $jsilcore.TypeRef("JSIL.Reference", [$.Single]), $jsilcore.TypeRef("System.Array", [$asm0E.TypeRef("TriHex.Source.Hexagon")]), 
+          $asm0E.TypeRef("TriHex.Source.Hexagon"), $.Single
+        ]), 
+      Board_checkMin
     );
 
     $.Method({Static:false, Public:true }, "draw", 
@@ -1202,12 +1249,23 @@ JSIL.MakeEnum(
     return Math.fround(Math.sqrt(result));
   };
 
+  function Util_distanceSquared (a, b) {
+    var dx = +a.X - +b.X;
+    var dy = +a.Y - +b.Y;
+    return ((dx * dx) + (dy * dy));
+  };
+
   JSIL.MakeStaticClass("TriHex.Source.Util", false, [], function ($interfaceBuilder) {
     $ = $interfaceBuilder;
 
     $.Method({Static:true , Public:true }, "distance", 
       new JSIL.MethodSignature($.Single, [$asm00.TypeRef("Microsoft.Xna.Framework.Vector2"), $asm00.TypeRef("Microsoft.Xna.Framework.Vector2")]), 
       Util_distance
+    );
+
+    $.Method({Static:true , Public:true }, "distanceSquared", 
+      new JSIL.MethodSignature($.Single, [$asm00.TypeRef("Microsoft.Xna.Framework.Vector2"), $asm00.TypeRef("Microsoft.Xna.Framework.Vector2")]), 
+      Util_distanceSquared
     );
 
     return function (newThisType) { $thisType = newThisType; }; 
@@ -1296,14 +1354,14 @@ JSIL.MakeEnum(
     this.spriteBatch = new ($T06())(this.get_GraphicsDevice());
     $thisType.hexImage = (this.get_Content()).Load$b1($T0A())("hex");
     $thisType.outlineImage = (this.get_Content()).Load$b1($T0A())("outline");
-    this.board = new ($T07())(10, 5);
+    this.board = new ($T07())(13, 6);
   };
 
   function Window_UnloadContent () {
   };
 
   function Window_Update (gameTime) {
-    var mouseState = $T0C().GetState();
+    var mouseState = $T0C().GetState().MemberwiseClone();
     (this.helper).Update();
     if (!((mouseState.get_LeftButton() !== $T0D().Pressed) || !$S01().CallVirtual("IsNewPress", null, this.helper, $T0E().LeftButton))) {
       (this.board).processClick(

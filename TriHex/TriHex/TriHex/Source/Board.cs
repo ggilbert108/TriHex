@@ -95,28 +95,21 @@ namespace TriHex.Source
                 return;
             }
             Hexagon[] trihex = new Hexagon[3];
-            SortedDictionary<float, Hexagon> map = new SortedDictionary<float, Hexagon>();
 
+            float one = 100000, two = 100000, three = 10000;
             for (int i = 0; i < height; i++)
             {
                 for (int j = 0; j < width; j++)
                 {
-                    Vector2 center = grid[i, j].center;
+                    Hexagon hexagon = grid[i, j];
+                    Vector2 click = new Vector2(x, y);
+                    float distance = Util.distanceSquared(hexagon.center, click);
 
-                    float dx = x - center.X;
-                    float dy = y - center.Y;
-                    float distance = dx*dx + dy*dy;
-                    if(!map.ContainsKey(distance))
-                    map.Add(distance, grid[i, j]);
+                    checkMin(ref one, ref two, ref three, trihex, hexagon, distance);
                 }
             }
 
             int filled = 0;
-
-            trihex[0] = map.Values.ElementAt(0);
-            trihex[1] = map.Values.ElementAt(1);
-            trihex[2] = map.Values.ElementAt(2);
-
             Vector2 triCenter = Vector2.Zero;
             foreach (Vector2 vertex in trihex[0].vertices)
             {
@@ -130,6 +123,43 @@ namespace TriHex.Source
 
             sortTri(trihex, triCenter);
 
+        }
+
+        private void checkMin(ref float one, ref float two, ref float three, Hexagon[] trihex, Hexagon hexagon, float distance)
+        {
+            if (distance < one)
+            {
+                Hexagon temp = null;
+                temp = trihex[0];
+                float tempDist = one;
+
+                trihex[0] = hexagon;
+                one = distance;
+
+                if (temp != null)
+                {
+                    checkMin(ref one, ref two, ref three, trihex, temp, tempDist);
+                }
+            }
+            else if (distance < two)
+            {
+                Hexagon temp = null;
+                temp = trihex[1];
+                float tempDist = two;
+
+                trihex[1] = hexagon;
+                two = distance;
+
+                if (temp != null)
+                {
+                    checkMin(ref one, ref two, ref three, trihex, temp, tempDist);
+                }
+            }
+            else if (distance < three)
+            {
+                trihex[2] = hexagon;
+                three = distance;
+            }
         }
 
         private void sortTri(Hexagon[] tri, Vector2 center)
