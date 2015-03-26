@@ -379,19 +379,16 @@ JSIL.DeclareNamespace("TriHex.Source");
     return ($T02 = JSIL.Memoize($asm05.System.Int32)) ();
   };
   var $T03 = function () {
-    return ($T03 = JSIL.Memoize($asm00.Microsoft.Xna.Framework.Rectangle)) ();
+    return ($T03 = JSIL.Memoize($asm05.System.Boolean)) ();
   };
   var $T04 = function () {
-    return ($T04 = JSIL.Memoize($asm05.System.Boolean)) ();
+    return ($T04 = JSIL.Memoize(System.Array.Of($asm00.Microsoft.Xna.Framework.Color))) ();
   };
   var $T05 = function () {
-    return ($T05 = JSIL.Memoize(System.Array.Of($asm00.Microsoft.Xna.Framework.Color))) ();
+    return ($T05 = JSIL.Memoize($asm00.Microsoft.Xna.Framework.Color)) ();
   };
   var $T06 = function () {
-    return ($T06 = JSIL.Memoize($asm00.Microsoft.Xna.Framework.Color)) ();
-  };
-  var $T07 = function () {
-    return ($T07 = JSIL.Memoize($asm00.Microsoft.Xna.Framework.Vector2)) ();
+    return ($T06 = JSIL.Memoize($asm00.Microsoft.Xna.Framework.Vector2)) ();
   };
 
   function Animation_containsHex (other) {
@@ -399,7 +396,7 @@ JSIL.DeclareNamespace("TriHex.Source");
 
     for (var i = 0; i < (array.length | 0); i = ((i + 1) | 0)) {
       var hex = array[i];
-      if ($T03().prototype.Equals.call(hex.get_bounds(), other.get_bounds())) {
+      if (!(((hex.get_bounds().X | 0) !== (other.get_bounds().X | 0)) || ((hex.get_bounds().Y | 0) !== (other.get_bounds().Y | 0)))) {
         var result = true;
         return result;
       }
@@ -410,7 +407,7 @@ JSIL.DeclareNamespace("TriHex.Source");
 
   function Animation_reset () {
     this.isAnimating = false;
-    var newHex = JSIL.Array.New($T06(), [(this.trihex[2]).get_color(), (this.trihex[0]).get_color(), (this.trihex[1]).get_color()]);
+    var newHex = JSIL.Array.New($T05(), [(this.trihex[2]).get_color(), (this.trihex[0]).get_color(), (this.trihex[1]).get_color()]);
 
     for (var i = 0; i < 3; i = ((i + 1) | 0)) {
       (this.trihex[i].color = newHex[i].MemberwiseClone());

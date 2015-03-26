@@ -230,7 +230,7 @@ namespace TriHex.Source
         {
             foreach (Hexagon hex in trihex)
             {
-                if (hex.bounds.Equals(other.bounds))
+                if (hex.bounds.X == other.bounds.X && hex.bounds.Y == other.bounds.Y)
                     return true;
             }
             return false;
