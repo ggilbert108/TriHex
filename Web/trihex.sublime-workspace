@@ -1,0 +1,410 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"room",
+				"roomIndexes"
+			],
+			[
+				"GI",
+				"GRID_WIDTH"
+			],
+			[
+				"GRID",
+				"GRID_HEIGHT"
+			],
+			[
+				"border-co",
+				"border-collapse"
+			],
+			[
+				"Ro",
+				"ROOM_COUNT"
+			],
+			[
+				"con",
+				"connectorB"
+			],
+			[
+				"connect",
+				"connectorA"
+			],
+			[
+				"Grid",
+				"GRID_WIDTH"
+			],
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"GR",
+				"GRID_HEIGHT"
+			],
+			[
+				"back",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "trihex.js",
+			"settings":
+			{
+				"buffer_size": 1393,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "trihex.html",
+			"settings":
+			{
+				"buffer_size": 428,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Enable Package"
+			]
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/E/Documents/GitHub/TriHex/Web"
+	],
+	"file_history":
+	[
+		"/E/Documents/GitHub/TriHex/Web/util.js",
+		"/E/Documents/GitHub/TriHex/Web/hexagon.js",
+		"/E/Documents/GitHub/TriHex/Web/circle_button.js",
+		"/E/Documents/GitHub/TriHex/Web/trihex.css",
+		"/E/Documents/GitHub/TriHex/Web/trihex.html",
+		"/E/Documents/GitHub/TriHex/Web/trihex.js",
+		"/E/Documents/GitHub/Action/Web/index.html",
+		"/E/Documents/GitHub/Action/Web/Solution.exe.manifest.js",
+		"/E/Documents/GitHub/Action/Web/game.css",
+		"/E/Documents/GitHub/Action/Libraries/XNA/XNA4.js",
+		"/E/Documents/GitHub/Action/Web/System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.js",
+		"/E/Documents/GitHub/Action/Libraries/JSIL.js",
+		"/E/Documents/GitHub/Action/Web/XNA.Colors.js",
+		"/E/Documents/GitHub/Action/Libraries/XNA/Graphics.js",
+		"/E/Documents/GitHub/Action/Libraries/JSIL.Core.js",
+		"/E/Documents/GitHub/Action/Web/Content/SolutionContent.contentproj.manifest.js",
+		"/E/Documents/GitHub/Action/Web/Content/Solution.contentproj.manifest.js",
+		"/E/Documents/GitHub/Crawler/Out/Content/Crawler.contentproj.manifest.js",
+		"/E/Documents/GitHub/Crawler/Out/Content/CrawlerContent.contentproj.manifest.js",
+		"/E/Documents/GitHub/Crawler/OLD/Dungeon Test/cell.js",
+		"/E/Documents/GitHub/Crawler/Out/Crawler, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null.js",
+		"/E/Documents/GitHub/Crawler/OLD/Dungeon Test/generate.js",
+		"/E/Documents/GitHub/Crawler/Out/Crawler.exe.manifest.js",
+		"/E/Documents/GitHub/Crawler/OLD/util.js",
+		"/E/Documents/GitHub/Crawler/Dungeon Test/cell.js",
+		"/E/Documents/GitHub/Crawler/util.js",
+		"/E/Documents/GitHub/Crawler/Dungeon Test/generate.css",
+		"/E/Documents/GitHub/Crawler/Dungeon Test/generate.html",
+		"/E/Documents/GitHub/Crawler/Dungeon Test/generate.js",
+		"/E/Documents/GitHub/Crawler/Dungeon Test/random.js",
+		"/E/Documents/GitHub/Crawler/index.html",
+		"/E/Documents/GitHub/Crawler/player.js",
+		"/E/Documents/GitHub/Crawler/gridController.js",
+		"/E/Documents/GitHub/Crawler/entity.js",
+		"/E/Documents/GitHub/Crawler/game.js",
+		"/E/Documents/GitHub/Crawler/generate_dungeon.js",
+		"/E/Documents/GitHub/Crawler/generate_table.js",
+		"/C/Users/Stallion/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/C/Users/Stallion/AppData/Roaming/Sublime Text 3/Packages/User/Refactor.sublime-settings",
+		"/C/Users/Stallion/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/C/Users/Stallion/AppData/Roaming/Sublime Text 3/Packages/sublime-text-refactor/Refactor.sublime-settings",
+		"/E/Documents/GitHub/Crawler/app.js",
+		"/E/Documents/GitHub/Crawler/monster.js",
+		"/E/Documents/GitHub/Crawler/character.js",
+		"/E/Documents/GitHub/Crawler/obstacle.js",
+		"/E/Documents/GitHub/Crawler/Crawler/index.html",
+		"/E/Documents/GitHub/Crawler/Crawler/monster.js",
+		"/E/Documents/GitHub/Crawler/game.css",
+		"/E/Documents/GitHub/Crawler/Crawler/game.css",
+		"/E/Documents/GitHub/Crawler/Crawler/entity.js",
+		"/E/Documents/GitHub/Crawler/Crawler/gridController.js",
+		"/E/Documents/GitHub/Crawler/Crawler/game.js",
+		"/E/Documents/GitHub/Crawler/Crawler/player.js",
+		"/E/Documents/GitHub/Crawler/Crawler/character.js",
+		"/E/Documents/GitHub/Crawler/Crawler/util.js",
+		"/E/Documents/GitHub/Crawler/Crawler/app.js",
+		"/E/Documents/GitHub/Crawler/Crawler/page.js",
+		"/E/Documents/GitHub/Crawler/Crawler/gameController.js",
+		"/E/Documents/GitHub/Crawler/Crawler/obstacle.js",
+		"/E/Documents/GitHub/Crawler/Crawler/generate_table.js",
+		"/E/Documents/GitHub/Crawler/Crawler/generate.html",
+		"/C/Users/Stallion/AppData/Roaming/Sublime Text 3/Packages/User/Distraction Free.sublime-settings",
+		"/C/Users/Stallion/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Stallion/AppData/Local/Temp/scp07583/home/ggilbert1/public_html/story/index.html",
+		"/C/Users/Stallion/AppData/Local/Temp/scp56867/home/ggilbert1/public_html/story/locationController.js",
+		"/C/Users/Stallion/AppData/Local/Temp/scp07551/home/ggilbert1/public_html/story/main.css",
+		"/C/Users/Stallion/AppData/Local/Temp/scp45711/home/ggilbert1/public_html/story/worldController.js",
+		"/C/Users/Stallion/AppData/Local/Temp/scp17090/home/ggilbert1/public_html/story/storyApp.js",
+		"/C/Users/Stallion/AppData/Local/Temp/scp34007/home/ggilbert1/public_html/story/story.js",
+		"/C/Users/Stallion/AppData/Local/Temp/scp30147/home/ggilbert1/public_html/story/storyController.js",
+		"/C/Users/Stallion/AppData/Local/Temp/scp23762/home/ggilbert1/public_html/story/storyController.js",
+		"/C/Users/Stallion/AppData/Local/Temp/scp08727/home/ggilbert1/public_html/story/storyApp.js",
+		"/C/Users/Stallion/AppData/Local/Temp/scp27314/home/ggilbert1/public_html/story/create_story.html",
+		"/C/Users/Stallion/AppData/Local/Temp/scp11742/home/ggilbert1/public_html/story/save.php",
+		"/C/Users/Stallion/AppData/Local/Temp/scp53119/home/ggilbert1/public_html/story/create_story.php",
+		"/C/Users/Stallion/AppData/Local/Temp/scp05048/home/ggilbert1/public_html/story/stories/test.json",
+		"/C/Users/Stallion/AppData/Local/Temp/scp05291/home/ggilbert1/public_html/story/stories/Test.json",
+		"/C/Users/Stallion/AppData/Local/Temp/scp49588/home/ggilbert1/public_html/story/create_story.js",
+		"/C/Users/Stallion/AppData/Local/Temp/scp27754/home/ggilbert1/public_html/story/main.css",
+		"/C/Users/Stallion/AppData/Local/Temp/scp35442/home/ggilbert1/public_html/story/index.js",
+		"/C/Users/Stallion/AppData/Local/Temp/scp52520/home/ggilbert1/public_html/story/index.html",
+		"/C/Users/Stallion/AppData/Local/Temp/scp41909/home/ggilbert1/public_html/story/create_story.php",
+		"/C/Users/Stallion/AppData/Local/Temp/scp52480/home/ggilbert1/public_html/story/index.html",
+		"/C/Users/Stallion/AppData/Local/Temp/scp07467/home/ggilbert1/public_html/story/design.js",
+		"/C/Users/Stallion/AppData/Local/Temp/scp57168/home/ggilbert1/public_html/story/design.css",
+		"/C/Users/Stallion/AppData/Local/Temp/scp26054/home/ggilbert1/public_html/story/create_story.html",
+		"/C/Users/Stallion/AppData/Local/Temp/scp13678/home/ggilbert1/public_html/story/create_story.php",
+		"/C/Users/Stallion/AppData/Local/Temp/scp58435/home/ggilbert1/public_html/story/design.js%20"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"makePaths",
+			"console",
+			"_min",
+			"1",
+			"-1",
+			"|",
+			"this.world",
+			"world",
+			"\">",
+			"}}",
+			"{{",
+			"}}\".",
+			"}}\"",
+			"<div id=[\"]([0-9]+)[|]([0-9]+)[\"] class=\"cell\">",
+			"<div id=\"([0-9]+|[0-9]+)\" class=\"cell\">",
+			"<div id=\"([0-9]+)\" class=\"cell\">",
+			"<div id=[\"]([0-9]+[|][0-9]+)\" class=\"cell\">",
+			">\n",
+			"|",
+			"&&",
+			"]",
+			"[",
+			"<th></th>",
+			"Temple"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"min",
+			"max",
+			"_min",
+			"_",
+			"this.map",
+			"",
+			"}}\">",
+			"}}\".",
+			"<div id=\"\\1|\\2\" class=\"cell\" ng-bind=\"{{getChar(\\1,\\2)}}\"",
+			"<div id=\"\\1\"",
+			"<div id=\\1",
+			"&",
+			"}",
+			"{",
+			"<td></td>"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "trihex.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1393,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								386,
+								386
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "trihex.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 428,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								15,
+								15
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "trihex.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 116.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
