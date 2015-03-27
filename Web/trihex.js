@@ -217,7 +217,7 @@ var BUTTON_SIZE = 20;
 var ROTATION_SYMBOL_OFFSET = -15;
 
 //size HAS to be an odd number
-var SIZE = 7;
+var SIZE = 5;
 //--------------------------------------------------
 
 var rotation = 0;
