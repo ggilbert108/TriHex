@@ -14,9 +14,24 @@ p
 	font-size: 16pt;
 }
 
-#score
+h2
 {
-	float: left;
 	font-size: 30pt;
 	color: red;
-;}
+}
+
+#score
+{
+	position: absolute;
+
+	top: 525px;
+	left: 150px;
+}
+
+#turns
+{
+	position: absolute;
+
+	top: 475px;
+	left: 60px;
+}

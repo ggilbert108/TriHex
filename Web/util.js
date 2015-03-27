@@ -1,14 +1,27 @@
-function pickColor()
+var colors = ["red", "blue", "green", "yellow", "purple", "orange"];
+
+function pickColor(required)
 {
-	var colors = ["red", "blue", "green", "yellow", "purple", "orange"];
-	var index = randomInt(colors.length - 1);
+	var index = randomInt(colors.length);
+
+	if(typeof required != "undefined")
+	{
+		for(var i = 0; i < required.length; i++)
+		{
+			if(required[i] > 0)
+			{
+				index = i;
+				required[i]--;
+			}
+		}
+	}
 	return colors[index];
 }
 
 function randomInt(max)
 {
 	var random = Math.random() * max;
-	return Math.round(random);
+	return Math.floor(random);
 }
 
 function getCircle(x, y, radius)
@@ -19,15 +32,31 @@ function getCircle(x, y, radius)
 	circle.graphics.beginStroke("black").drawCircle(0, 0, radius);
     circle.x = x;
     circle.y = y;
+    circle.radius = radius;
     circle.centerX = x;
     circle.centerY = y;
+    circle.enabled = true;
     circle.setBounds(x - radius, y - radius, radius * 2, radius * 2)
     return circle;
 }
 
-function getHexagon(row, col, index)
+function redrawCircle(shape, enabled)
 {
-	var color = pickColor();
+	shape.enabled = enabled;
+
+	var color = "green";
+	if(!enabled)
+		color = "SlateGray";
+
+	shape.graphics.clear();
+    shape.graphics.beginFill(color).drawCircle(0, 0, shape.radius);
+    shape.graphics.setStrokeStyle(3, "butt");
+	shape.graphics.beginStroke("black").drawCircle(0, 0, shape.radius);
+}
+
+function getHexagon(row, col, index, required)
+{
+	var color = pickColor(required);
 
 	var x = col * (HEX_WIDTH * 0.75) + CANVAS_X_OFFSET;
 	var y = row * HEX_HEIGHT + CANVAS_Y_OFFSET;
@@ -175,4 +204,48 @@ function clearMarked()
 	{
 		grid[i].marked = false;
 	}
+}
+
+function countColors(exceptions)
+{
+	var count = [];
+	for(var i = 0; i < colors.length; i++)
+	{
+		count[i] = 0;
+	}
+
+	for(var i = 0; i < grid.length; i++)
+	{
+		var hex = grid[i];
+		if(exceptions.indexOf(hex) >= 0)
+			continue;
+
+		var index = colors.indexOf(hex.color);
+		count[index]++;
+	}
+
+	var max = 0;
+	var maxIndex = -1;
+	for(var i = 0; i < count.length; i++)
+	{
+		if(count[i] > max)
+		{
+			max = count[i];
+			maxIndex = i;
+		}
+	}
+
+	var required = 0;
+	if(max < 5)
+	{
+		required = 5 - max;
+	}
+
+	for(var i = 0; i < count.length; i++)
+	{
+		count[i] = 0;
+	}
+	count[maxIndex] = required;
+
+	return count;
 }

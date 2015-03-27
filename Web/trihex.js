@@ -7,6 +7,9 @@ var ctx;
 var stage;
 
 var score = 0;
+var MAX_TURNS = 6;
+
+var turnsLeft = MAX_TURNS + 1;
 
 var animation =
 {
@@ -21,7 +24,8 @@ var fading =
 {
 	isFading: false,
 	fadingHexes: [],
-	id: 0
+	id: 0,
+	colors: []
 };
 
 function start()
@@ -29,6 +33,9 @@ function start()
 	ctx = document.getElementById("canvas").getContext("2d");
 	stage = new createjs.Stage("canvas");
 	var half = Math.floor(SIZE / 2);
+
+	var required = [0, 0, 0, 0, 0, 0];
+	required[randomInt(6)] = 5;
 	for(var i = 0; i < SIZE; i++)
 	{
 		var colSize = SIZE - Math.abs(i - half);
@@ -36,7 +43,7 @@ function start()
 		{
 			var offset = SIZE - colSize;
 			var row = j + offset / 2;
-			var hexagon = getHexagon(row, i, grid.length);
+			var hexagon = getHexagon(row, i, grid.length, required);
 			grid[grid.length] = hexagon;
 			stage.addChild(hexagon);
 
@@ -61,6 +68,7 @@ function start()
 		var ind = i;
 		buttons[i].addEventListener("click", handleClick);
 	}
+	updateTurns();
 	updateScore();
 	checkBoard();
 	stage.update();
@@ -102,6 +110,7 @@ function animate(trihex)
 				redrawHex(trihex[i], colors[i]);
 			}
 			animation.animating = false;
+
 			checkBoard();
 		}
 		stage.update();
@@ -113,6 +122,11 @@ function fade(group)
 	fading.isFading = true;
 	fading.fadingHexes = group;
 
+	var colorCounts = countColors(group);
+
+	fading.colors = colorCounts;
+	console.log(colorCounts);
+
 	fading.id = setInterval(function(){
 		var ended = false;
 		for(var i = 0; i < fading.fadingHexes.length; i++)
@@ -123,7 +137,7 @@ function fade(group)
 			{
 				ended = true;
 				hex.alpha = 1;
-				redrawHex(hex, pickColor());
+				redrawHex(hex, pickColor(fading.colors));
 				clearInterval(fading.id);
 			}
 		}
@@ -146,6 +160,11 @@ function handleClick(evt)
 		return;
 	}
 	var button = evt.currentTarget;
+	if(!button.enabled)
+	{
+		return;
+	}
+
 	var bounds = button.getBounds();
 
 	var trihex = findIntersectingHexagons(bounds);
@@ -161,6 +180,8 @@ function handleClick(evt)
 	animation.centerX = button.centerX;
 	animation.centerY = button.centerY;
 	animate(trihex);
+	updateTurns();
+
 	stage.update();
 }
 
@@ -186,10 +207,14 @@ function checkBoard()
 		var group = getGroup(grid[i], 5);
 		if(group.length >= 5)
 		{
+			turnsLeft = MAX_TURNS + 1;
+						updateTurns();
+
 			fade(group);
-			return;
+			return true;
 		}
 	}
+	return false;
 }
 
 function removeGroup(group)
@@ -204,7 +229,55 @@ function removeGroup(group)
 function updateScore()
 {
 	var scoreElement = document.getElementById("score");
-	scoreElement.innerHTML = score;
+	scoreElement.innerHTML = "score: " + score;
+}
+
+function updateTurns(stay)
+{
+	if(turnsLeft == 1)
+	{
+		penalize();
+		turnsLeft = MAX_TURNS + 1;
+	}
+	turnsLeft--;
+
+
+	var turnElement = document.getElementById("turns");
+	turnElement.innerHTML = "remaining turns: " + (turnsLeft - 1);
+}
+
+function penalize()
+{
+	var index =  randomInt(buttons.length);
+
+	if(!buttons[index].enabled)
+	{
+		index = -1;
+		for(var i = 0; i < buttons.length; i++)
+		{
+			if(buttons[i].enabled)
+			{
+				index = i;
+			}
+		}
+	}
+	redrawCircle(buttons[index], false);
+	checkGameOver();
+}
+
+function checkGameOver()
+{
+	for(var i = 0; i < buttons.length; i++)
+	{
+		if(buttons[i].enabled)
+			return;
+	}
+	gameOver();
+}
+
+function gameOver()
+{
+	window.location = "gameover.html";
 }
 
 //------------------CONSTANTS-----------------------
