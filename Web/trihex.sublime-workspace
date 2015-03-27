@@ -55,15 +55,31 @@
 			"file": "trihex.js",
 			"settings":
 			{
-				"buffer_size": 1393,
+				"buffer_size": 4191,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "trihex.html",
+			"file": "index.html",
 			"settings":
 			{
-				"buffer_size": 428,
+				"buffer_size": 454,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "util.js",
+			"settings":
+			{
+				"buffer_size": 3351,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "trihex.css",
+			"settings":
+			{
+				"buffer_size": 153,
 				"line_ending": "Windows"
 			}
 		}
@@ -104,11 +120,12 @@
 	],
 	"file_history":
 	[
-		"/E/Documents/GitHub/TriHex/Web/util.js",
-		"/E/Documents/GitHub/TriHex/Web/hexagon.js",
-		"/E/Documents/GitHub/TriHex/Web/circle_button.js",
-		"/E/Documents/GitHub/TriHex/Web/trihex.css",
 		"/E/Documents/GitHub/TriHex/Web/trihex.html",
+		"/E/Documents/GitHub/TriHex/Web/trihex.css",
+		"/E/Documents/GitHub/TriHex/Web/util.js",
+		"/E/Documents/GitHub/TriHex/Web/trihex.sublime-project",
+		"/E/Documents/GitHub/TriHex/Web/circle_button.js",
+		"/E/Documents/GitHub/TriHex/Web/hexagon.js",
 		"/E/Documents/GitHub/TriHex/Web/trihex.js",
 		"/E/Documents/GitHub/Action/Web/index.html",
 		"/E/Documents/GitHub/Action/Web/Solution.exe.manifest.js",
@@ -195,7 +212,7 @@
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 46.0
 	},
 	"find_in_files":
 	{
@@ -209,6 +226,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			")\n",
 			"makePaths",
 			"console",
 			"_min",
@@ -265,7 +283,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -274,20 +292,49 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1393,
+						"buffer_size": 4191,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								386,
-								386
+								909,
+								909
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2214.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 454,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								312,
+								312
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -298,26 +345,54 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "trihex.html",
+					"buffer": 2,
+					"file": "util.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 428,
+						"buffer_size": 3351,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								15,
-								15
+								2554,
+								2554
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 495.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "trihex.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 153,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								92,
+								92
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
