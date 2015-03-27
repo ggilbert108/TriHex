@@ -1,4 +1,22 @@
+img
+{
+	visibility: hidden;
+	display: none;
+}
+
 canvas
 {
-	border: 1px solid black;
+	float: left;
 }
+
+p
+{
+	font-size: 16pt;
+}
+
+#score
+{
+	float: left;
+	font-size: 30pt;
+	color: red;
+;}
