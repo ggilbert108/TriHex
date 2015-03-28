@@ -20,18 +20,7 @@ h2
 	color: red;
 }
 
-#score
+td
 {
-	position: absolute;
-
-	top: 565px;
-	left: 150px;
-}
-
-#turns
-{
-	position: absolute;
-
-	top: 535px;
-	left: 60px;
+	text-align: center;
 }
